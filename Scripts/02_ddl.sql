@@ -1,0 +1,30 @@
+CREATE TABLE EMPLOYEES (
+	id VARCHAR2(10) NOT NULL,
+	pass VARCHAR2(10) NOT NULL,
+	name VARCHAR2(24),
+	lev CHAR(1) DEFAULT 'A', 	-- A: 운영자, B: 일반회원
+	enter Date DEFAULT sysdate,	-- 등록일
+	gender CHAR(1) DEFAULT '1',	-- 1: 남자, 2: 여자
+	phone VARCHAR2(30),
+	PRIMARY KEY(id)
+);
+
+/* 테이블 삭제 */
+DROP TABLE EMPLOYEES;
+
+/* 테이블 확인 */
+SELECT * FROM EMPLOYEES;
+
+SELECT *
+  FROM USER_TABLES
+ WHERE TABLE_NAME = 'EMPLOYEES';
+ 
+-- 접속한 계정의 테이블별 컬럼 조회 
+SELECT *
+  FROM USER_TAB_COLUMNS
+ WHERE TABLE_NAME in('EMPLOYEES');
+
+-- 접속한 계정의 테이블별 제약조건 검색
+SELECT *
+  FROM USER_CONSTRAINTS
+ WHERE TABLE_NAME in('EMPLOYEES');
