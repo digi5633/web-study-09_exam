@@ -7,9 +7,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta charset=UTF-8>
-	<title>회원 전용 페이지</title>
-	<script type="text/javascript" src="script/employees.js"></script>
+		<meta charset=UTF-8>
+		<title>회원 전용 페이지</title>
+		<script type="text/javascript" src="script/employees.js"></script>
 	</head>
 	
 	<body align="center">
